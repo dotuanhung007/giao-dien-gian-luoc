@@ -1,0 +1,128 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 70px; /* Bù lại chiều cao của header cố định để nội dung không bị che */
+    min-height: 1500px; /* Đảm bảo đủ độ dài để cuộn trang */
+}
+
+/* Header cố định */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.main-header nav ul li a:hover {
+    color: #00adee;
+}
+
+/* Container cho bố cục Flexbox 3 cột */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Styling chung cho các Sidebar */
+.sidebar {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.left-sidebar {
+    width: 200px;
+}
+
+.right-sidebar {
+    width: 200px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #00adee;
+    padding-bottom: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+/* Khu vực nội dung chính */
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.main-content p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
